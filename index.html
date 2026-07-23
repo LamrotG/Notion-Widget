@@ -3,28 +3,54 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="transparent">
-    
+    <meta name="theme-color" content="#101010">
+
     <title>Week Widget</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="style.css">
-    
 </head>
+
 <body>
 
 <div class="widget">
+
     <span class="label">WEEK</span>
 
-    <div class="number-wrapper">
-        <span class="number" id="week-number">0</span>
+
+    <div class="week-row">
+
+        <span class="date" id="start-date">
+            July 19
+        </span>
+
+
+        <div class="number-wrapper">
+            <span class="number" id="week-number">
+                0
+            </span>
+        </div>
+
+
+        <span class="date" id="end-date">
+            July 25
+        </span>
+
     </div>
+
+
+    <span class="year" id="year">
+        2026
+    </span>
+
 </div>
+
 
 <script src="script.js"></script>
 
 </body>
+
 </html>

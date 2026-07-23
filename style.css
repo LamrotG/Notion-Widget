@@ -4,18 +4,24 @@
     box-sizing: border-box;
 }
 
+
 :root {
-    --text: #f5f5f5;
+    --text: #d3d3d3;
 }
 
 html,
 body {
+
     width: 100%;
     height: 100%;
-    background: #101010;
+
+    background: #191919;
+
 }
 
+
 body {
+
     width: 100vw;
     height: 100vh;
 
@@ -23,130 +29,260 @@ body {
     justify-content: center;
     align-items: center;
 
-    background: #101010;
+
     overflow: hidden;
+
+    background: #191919;
 
     font-family: "Michroma", sans-serif;
 
+
     user-select: none;
+
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
 }
+
+
 
 .widget {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 
-    animation: fadeIn .8s ease;
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    animation:fadeIn .8s ease;
+
 }
 
-.number-wrapper {
-    animation: float 4s ease-in-out infinite;
+
+
+/* Dates */
+
+.date {
+
+    color:var(--text);
+
+    opacity:.45;
+
+
+    font-size:14px;
+
+    letter-spacing:.08em;
+
+    white-space:nowrap;
+
 }
+
+
+
+/* WEEK */
 
 .label {
-    color: var(--text);
 
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: .45em;
-    text-transform: uppercase;
+    color:var(--text);
 
-    margin-bottom: 8px;
+    font-size:20px;
 
-    opacity: .55;
+    font-weight:700;
 
-    animation: glow 4s ease-in-out infinite;
+    letter-spacing:.45em;
+
+    text-transform:uppercase;
+
+
+    margin-bottom:18px;
+
 }
+
+/* Number + dates row */
+
+.week-row {
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap: 240px;
+
+}
+
+
+
+/* Animated number container */
+
+.number-wrapper {
+
+    animation:float 4s ease-in-out infinite;
+
+}
+
+
 
 .number {
-    color: var(--text);
 
-    font-size: 110px;
-    line-height: 1;
-    font-weight: 800;
+    color:var(--text);
 
-    text-shadow: 0 2px 8px rgba(255,255,255,.15);
 
-    transform-origin: center;
+    font-size:110px;
 
-    animation: pulse 3.5s ease-in-out infinite;
+    line-height:1;
+
+    font-weight:800;
+
+
+    text-shadow:
+        0 0 12px rgba(245,245,245,.35),
+        0 0 30px rgba(245,245,245,.15);
+
+
+    display:block;
+
+
+    animation:pulse 3.5s ease-in-out infinite;
+
 }
 
-@media (max-width: 500px) {
+
+
+.year {
+
+    margin-top:18px;
+
+
+    color:var(--text);
+
+
+    font-size:20px;
+
+    font-weight:700;
+
+    letter-spacing:.45em;
+
+
+}
+
+
+
+@media (max-width:500px){
 
     .label {
-        font-size: 16px;
+        font-size:16px;
     }
 
+
+    .week-row {
+
+        gap:15px;
+
+    }
+
+
+    .date {
+
+        font-size:10px;
+
+    }
+
+
     .number {
-        font-size: 58px;
+
+        font-size:58px;
+
+    }
+
+
+    .year {
+
+        font-size:16px;
+
     }
 
 }
 
-/* ---------- Animations ---------- */
+
+
+/* Animations */
+
 
 @keyframes fadeIn {
 
     from {
-        opacity: 0;
-        transform: translateY(12px);
+
+        opacity:0;
+
+        transform:translateY(12px);
+
     }
 
+
     to {
-        opacity: 1;
-        transform: translateY(0);
+
+        opacity:1;
+
+        transform:translateY(0);
+
     }
 
 }
+
+
 
 @keyframes float {
 
+
     0% {
-        transform: translateY(0);
+
+        transform:translateY(0);
+
     }
+
 
     50% {
-        transform: translateY(-6px);
+
+        transform:translateY(-6px);
+
     }
 
+
     100% {
-        transform: translateY(0);
+
+        transform:translateY(0);
+
     }
 
 }
+
+
 
 @keyframes pulse {
 
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.03);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-
-}
-
-@keyframes glow {
 
     0% {
-        opacity: .55;
+
+        transform:scale(1);
+
     }
+
 
     50% {
-        opacity: 1;
+
+        transform:scale(1.03);
+
     }
 
+
     100% {
-        opacity: .55;
+
+        transform:scale(1);
+
     }
 
 }
