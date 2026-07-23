@@ -18,16 +18,6 @@ The widget is designed to be embedded into Notion, but it can be used anywhere a
 - The cycle continues until **Week 52**.
 - After Week 52, it automatically resets to **Week 0** and repeats.
 
-Example:
-
-| Date             | Display |
-| Jul 19 – Jul 25  | Week 0  |
-| Jul 26 – Aug 1   | Week 1  |
-| Aug 2 – Aug 8    | Week 2  | 
-| ................ | ....... |
-| Week 52          | Week 52 |
-| Following Sunday | Week 0 |
-
 ---
 
 ## Files
